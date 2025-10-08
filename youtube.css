@@ -55,15 +55,26 @@ header {
     transform: translate(-50%, -50%);
     z-index: 5;
 }
+
 .search-input {
-    padding: 0.5rem 1rem;
+    padding: 10px 16px;
     align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 360px;
-    font-size: 1rem;
+    border: 1px solid #e6e6e6;
+    border-radius: 40px; /* pill shape */
+    width: 420px;
+    max-width: 60vw;
+    min-width: 180px;
+    font-size: 0.95rem;
     outline: none;
     margin-right: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    transition: box-shadow .15s ease, border-color .15s ease;
+}
+
+.search-input:focus {
+    border-color: rgba(4,111,251,0.9);
+    box-shadow: 0 4px 12px rgba(4,111,251,0.08);
 }
 
 .input-search:focus {
@@ -73,18 +84,20 @@ header {
 
 
 .search-btn {
-    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
     border: none;
-    background-color: #2d313600;
-    color: white;
-    border-radius: 4px;
+    background-color: rgb(146, 144, 144);
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
     font-size: 1rem;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.search-btn:hover {
-    background-color: #ff0000;
-    color: white;
-}
+.search-btn svg { display: block; width: 18px; height: 18px; fill: #ffffff; }
+.search-btn:hover { opacity: .95; transform: translateY(-1px); }
 
 /* Responsive: reduce search width on narrow screens */
 @media (max-width: 700px) {
@@ -116,4 +129,48 @@ header {
     margin-right: 20px;
     height: 30px;
     width: 30px;
+}
+
+.bi.bi-mic-fill {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 20px;
+    height: 23px;
+    width: 23px;
+
+}
+
+.voice-search {
+    font-size: 25px;
+    cursor: pointer;
+    margin-right: 15px;
+    height: 30px;
+    width: 30px;
+    border-radius: 100px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(240, 240, 240);
+    border: 1px solid transparent;
+    color: black;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.voice-search:hover {
+    background-color: rgb(220, 220, 220);
+}
+
+/* Listening state */
+.voice-search.listening {
+    background-color: #ff0000;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(255,0,0,0.12);
+}
+.voice-search:focus {
+    outline: 2px solid rgba(4,111,251,0.6);
 }
