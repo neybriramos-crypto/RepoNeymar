@@ -19,7 +19,7 @@ header {
     gap: 1rem;
     max-width: 1100px;
     margin: 0 auto;
-    position: relative; /* needed so .search-bar absolute is centered within */
+    position: relative;
 }
 
 .logo-container {
