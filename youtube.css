@@ -49,7 +49,7 @@ header {
     justify-content: center;
     margin: 0;
     gap: 0.5rem;
-    position: absolute; /* center horizontally within header-inner */
+    position: absolute; 
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
