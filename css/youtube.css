@@ -213,7 +213,6 @@ header {
   margin-bottom: 4px;
   /* Cortar texto a 2 líneas */
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
